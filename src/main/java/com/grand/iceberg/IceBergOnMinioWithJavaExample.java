@@ -1,3 +1,5 @@
+package com.grand.iceberg;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.iceberg.DataFile;
 import org.apache.iceberg.DataFiles;
@@ -18,7 +20,7 @@ import org.apache.iceberg.types.Types;
 import java.io.IOException;
 import java.util.UUID;
 
-public class TableCreator {
+public class IceBergOnMinioWithJavaExample {
 
     public static final String tableLocation = "s3a://my-warehouse";
 
@@ -41,8 +43,8 @@ public class TableCreator {
     }
 
     public static void main(String[] args) throws IOException {
-//        createDataList();
-        dropTable();
+        createDataList();
+//        dropTable();
     }
 
     public static void createDataList() throws IOException {

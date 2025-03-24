@@ -1,0 +1,20 @@
+plugins {
+    id 'java'              // 应用 Java 插件
+    id 'application'       // 应用 Application 插件（可选，用于打包可执行程序）
+}
+
+group = 'com.grand'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'  // 指定 Java 版本
+
+repositories {
+    mavenCentral()         // 配置仓库
+}
+
+dependencies {
+    implementation group: 'org.apache.iceberg', name: 'iceberg-core', version: '1.4.2'
+    implementation group: 'org.apache.iceberg', name: 'iceberg-data', version: '1.4.2'
+    implementation group: 'org.apache.iceberg', name: 'iceberg-parquet', version: '1.4.2'
+    implementation group: 'org.apache.hadoop', name: 'hadoop-common', version: '3.3.1'
+    implementation group: 'org.apache.hadoop', name: 'hadoop-aws', version: '3.3.1'
+}
